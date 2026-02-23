@@ -1,0 +1,197 @@
+/* =====================
+   Navbar Component
+   ===================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-height);
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all var(--duration) var(--ease);
+    border-bottom: 1px solid transparent;
+}
+
+.navbar--scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+    border-bottom-color: var(--neutral-200);
+}
+
+.navbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Brand */
+.navbar__brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.navbar__logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+}
+
+.navbar__brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar__brand-name {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--green-800);
+    line-height: 1.2;
+}
+
+.navbar__brand-tagline {
+    font-size: 0.65rem;
+    color: var(--orange-600);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Links */
+.navbar__links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.navbar__link {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--neutral-700);
+    border-radius: var(--radius-sm);
+    transition: all var(--duration) var(--ease);
+    position: relative;
+}
+
+.navbar__link:hover {
+    color: var(--primary);
+    background: var(--green-100);
+}
+
+.navbar__link--active {
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.navbar__link--active::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: var(--radius-full);
+}
+
+/* CTA */
+.navbar__cta-desktop {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.85rem;
+}
+
+.navbar__cta-mobile {
+    display: none;
+}
+
+/* Mobile Toggle */
+.navbar__toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--neutral-800);
+    padding: var(--space-sm);
+    border-radius: var(--radius-sm);
+    transition: background var(--duration) var(--ease);
+}
+
+.navbar__toggle:hover {
+    background: var(--neutral-200);
+}
+
+/* Overlay */
+.navbar__overlay {
+    display: none;
+}
+
+/* --- Mobile --- */
+@media (max-width: 900px) {
+    .navbar__toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar__cta-desktop {
+        display: none;
+    }
+
+    .navbar__links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: var(--white);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: calc(var(--nav-height) + var(--space-xl)) var(--space-xl) var(--space-xl);
+        gap: var(--space-xs);
+        box-shadow: var(--shadow-xl);
+        transition: right 0.35s var(--ease);
+        z-index: 1001;
+    }
+
+    .navbar__links--open {
+        right: 0;
+    }
+
+    .navbar__link {
+        font-size: 1.05rem;
+        padding: 0.75rem 1rem;
+        width: 100%;
+        border-radius: var(--radius-md);
+    }
+
+    .navbar__cta-mobile {
+        display: block;
+        width: 100%;
+        margin-top: var(--space-md);
+    }
+
+    .navbar__cta-mobile .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar__overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 999;
+        animation: fadeIn 0.3s var(--ease) both;
+    }
+}

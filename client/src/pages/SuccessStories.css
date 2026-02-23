@@ -1,0 +1,82 @@
+/* =====================
+   Success Stories Styles
+   ===================== */
+
+.stories__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+}
+
+.stories__card {
+    padding: var(--space-2xl);
+    position: relative;
+}
+
+.stories__quote-icon {
+    position: absolute;
+    top: var(--space-xl);
+    right: var(--space-xl);
+    font-size: 1.5rem;
+    color: var(--green-200);
+}
+
+.stories__meta {
+    margin-bottom: var(--space-md);
+}
+
+.stories__meta strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--text-heading);
+}
+
+.stories__meta span {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.stories__result {
+    font-size: 1.15rem;
+    color: var(--green-700);
+    margin-bottom: var(--space-md);
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+
+.stories__text {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: var(--space-lg);
+}
+
+.stories__metrics {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-md);
+}
+
+.stories__metric {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: var(--green-100);
+    color: var(--green-800);
+    font-size: 0.78rem;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+}
+
+.stories__stars {
+    display: flex;
+    gap: 2px;
+    color: var(--orange-500);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .stories__grid {
+        grid-template-columns: 1fr;
+    }
+}
