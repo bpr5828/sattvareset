@@ -30,7 +30,7 @@ export default function Footer() {
                                 <a href="mailto:sattvareset@gmail.com" aria-label="Email">
                                     <FaEnvelope />
                                 </a>
-                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <a href="https://www.instagram.com/sattvareset?igsh=bWlzaXQ3dTNkem5l&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                     <FaInstagram />
                                 </a>
                                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">

@@ -34,7 +34,7 @@ export default function Navbar() {
                     <img src="/SattvaResetLogo.jpeg" alt="Sattva Reset" className="navbar__logo" />
                     <div className="navbar__brand-text">
                         <span className="navbar__brand-name">Sattva Reset</span>
-                        <span className="navbar__brand-tagline">Health . Fitness . Diet Coaching</span>
+                        <span className="navbar__brand-tagline">Happier . Healthier . Stronger</span>
                     </div>
                 </Link>
 
