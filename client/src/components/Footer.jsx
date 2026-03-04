@@ -78,13 +78,6 @@ export default function Footer() {
                                     <a href="https://wa.me/17034240537">+1 (703) 424-0537</a>
                                 </li>
                             </ul>
-                            <div className="footer__newsletter">
-                                <p>Subscribe to our newsletter</p>
-                                <form className="footer__newsletter-form" onSubmit={e => e.preventDefault()}>
-                                    <input type="email" placeholder="Your email" aria-label="Email for newsletter" />
-                                    <button type="submit" className="btn btn-accent">Join</button>
-                                </form>
-                            </div>
                         </div>
                     </div>
 

@@ -142,21 +142,6 @@ export default function Blog() {
                     </div>
                 </div>
             </section>
-
-            {/* Newsletter CTA */}
-            <section className="section cta-section">
-                <div className="container cta-section__inner">
-                    <h2>Get Weekly Health Tips</h2>
-                    <p>
-                        Join our newsletter for exclusive articles, recipes, and wellness tips
-                        delivered straight to your inbox.
-                    </p>
-                    <form className="blog-newsletter__form" onSubmit={e => e.preventDefault()}>
-                        <input type="email" placeholder="Enter your email address" aria-label="Email" />
-                        <button type="submit" className="btn btn-accent btn-lg">Subscribe</button>
-                    </form>
-                </div>
-            </section>
         </div>
     )
 }
