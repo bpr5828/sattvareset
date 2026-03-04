@@ -31,7 +31,7 @@ export default function Navbar() {
         <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
             <div className="navbar__inner container">
                 <Link to="/" className="navbar__brand">
-                    <img src="/SattvaResetLogo.jpeg" alt="Sattva Reset" className="navbar__logo" />
+                    <img src="/SattvaResetLogo3.jpeg" alt="Sattva Reset" className="navbar__logo" />
                     <div className="navbar__brand-text">
                         <span className="navbar__brand-name">Sattva Reset</span>
                         <span className="navbar__brand-tagline">Happier . Healthier . Stronger</span>

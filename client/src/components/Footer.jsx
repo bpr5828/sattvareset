@@ -16,7 +16,7 @@ export default function Footer() {
                     <div className="footer__grid">
                         {/* Brand */}
                         <div className="footer__brand">
-                            <img src="/SattvaResetLogo.jpeg" alt="Sattva Reset" className="footer__logo" />
+                            <img src="/SattvaResetLogo3.jpeg" alt="Sattva Reset" className="footer__logo" />
                             <h3>Sattva Reset</h3>
                             <p>
                                 Holistic health coaching focused on metabolic fitness, gut health,
