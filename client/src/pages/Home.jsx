@@ -1,31 +1,31 @@
 import { Link } from 'react-router-dom'
 import {
-    FaHeartbeat, FaClock, FaLeaf, FaSeedling,
+    FaHeartbeat, FaDumbbell, FaWind, FaMoon,
     FaArrowRight, FaStar, FaQuoteLeft
 } from 'react-icons/fa'
-import { GiMuscleUp, GiStomach } from 'react-icons/gi'
+import { GiStomach } from 'react-icons/gi'
 import './Home.css'
 
 const valueProps = [
     {
         icon: <FaHeartbeat />,
-        title: 'Metabolic Fitness',
-        desc: 'Boost your metabolism naturally and improve how your body processes energy for sustained vitality.',
+        title: 'Eat to Nourish',
+        desc: 'What you eat, how much, when, and how often all shape your health. I guide you in finding the right approach for your unique body — building sustainable habits for a healthier, stronger life.',
     },
     {
-        icon: <FaClock />,
-        title: 'Time-Restricted Eating',
-        desc: 'Master fasting windows and unlock autophagy — your body\'s powerful cellular renewal process.',
+        icon: <FaDumbbell />,
+        title: 'Move to Strengthen',
+        desc: 'The body was designed to move. Building and maintaining muscle mass boosts metabolism, regulates blood sugar, and supports long-term mobility, independence, and vitality as you age.',
     },
     {
-        icon: <FaSeedling />,
-        title: 'Hormonal Balance',
-        desc: 'Restore natural hormonal harmony through strategic nutrition and lifestyle adjustments.',
+        icon: <FaWind />,
+        title: 'Breathe to Balance',
+        desc: 'Conscious breathing calms the nervous system, controls cortisol, and supports body recomposition. Mindful breathwork is one of the most effective tools for lasting physical and mental wellbeing.',
     },
     {
-        icon: <FaLeaf />,
-        title: 'Gut Health & Detox',
-        desc: 'Heal your gut, optimize digestion, and support your body\'s natural detoxification pathways.',
+        icon: <FaMoon />,
+        title: 'Sleep to Restore',
+        desc: 'Sleep is when the body repairs tissues, balances hormones, and prepares for the next day. Quality rest is not a luxury — it is a foundation for long-term health, performance, and longevity.',
     },
 ]
 
@@ -95,8 +95,8 @@ export default function Home() {
             <section className="section values">
                 <div className="container">
                     <div className="section-header">
-                        <h2>Transform Your Health Naturally</h2>
-                        <p>A holistic approach to wellness that addresses the root causes, not just symptoms</p>
+                        <h2>The Four Foundations of Health</h2>
+                        <p>When eating, movement, breathing, and sleep are aligned — the body functions at its best, building longevity and vitality</p>
                     </div>
                     <div className="values__grid">
                         {valueProps.map((item, i) => (

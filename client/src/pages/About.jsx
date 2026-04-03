@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { FaArrowRight, FaLeaf, FaHeart, FaSeedling, FaCheckCircle } from 'react-icons/fa'
+import { FaArrowRight, FaAppleAlt, FaDumbbell, FaBed, FaCheckCircle } from 'react-icons/fa'
 import './About.css'
 
 const qualifications = [
@@ -13,19 +13,19 @@ const qualifications = [
 
 const philosophy = [
     {
-        icon: <FaSeedling />,
-        title: 'Bio-Individuality',
-        desc: 'Every person is unique. What works for one may not work for another. I tailor each plan to your specific needs, lifestyle, and goals.',
+        icon: <FaAppleAlt />,
+        title: 'Nourish with Intention',
+        desc: 'Nutrition is not one size fits all. Age, gender, activity level, and underlying health conditions all influence what your body truly needs. My goal is to help you eat with awareness — choosing foods that nourish and support long-term health.',
     },
     {
-        icon: <FaLeaf />,
-        title: 'Food as Medicine',
-        desc: 'The right foods can heal, energize, and transform your body. I help you harness the therapeutic power of whole, nutrient-dense nutrition.',
+        icon: <FaDumbbell />,
+        title: 'Move with Purpose',
+        desc: 'Maintaining muscle mass is one of the most important investments you can make. Strong skeletal muscles support metabolism, regulate blood sugar, protect joints, and allow you to remain active, independent, and confident as you age.',
     },
     {
-        icon: <FaHeart />,
-        title: 'Holistic Approach',
-        desc: 'True health goes beyond diet. We address metabolism, gut health, sleep, hormones, stress, and movement as an interconnected system.',
+        icon: <FaBed />,
+        title: 'Rest to Rebuild',
+        desc: 'Without proper rest, even the best nutrition and exercise routines cannot fully support your health. Sleep is when the body adapts to challenges, repairs itself, and prepares for better outcomes. Quality rest is a foundation, not a luxury.',
     },
 ]
 
@@ -79,7 +79,7 @@ export default function About() {
                 <div className="container">
                     <div className="section-header">
                         <h2>My Coaching Philosophy</h2>
-                        <p>Three core principles guide every coaching relationship</p>
+                        <p>The human body is like a tree — when given the right environment, it thrives naturally</p>
                     </div>
                     <div className="about-philosophy__grid">
                         {philosophy.map((item, i) => (

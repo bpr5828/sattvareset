@@ -30,3 +30,4 @@ client/.vite/
 
 # AI/brain files
 .gemini/
+.vercel

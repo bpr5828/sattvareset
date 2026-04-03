@@ -42,7 +42,7 @@ const focusAreas = [
     {
         icon: <FaBed />,
         title: 'Sleep Optimization',
-        desc: 'Quality sleep is the foundation of health. We\'ll address nutrition timing, supplements, and habits that promote deep, restorative sleep for better recovery, mood, and metabolic function.',
+        desc: 'Sleep is when the body repairs tissues, balances hormones, and restores energy. Without proper rest, even the best nutrition and exercise cannot fully support your health. Quality sleep improves focus, mood, performance, weight loss, and recovery.',
     },
     {
         icon: <GiStomach />,
@@ -52,7 +52,7 @@ const focusAreas = [
     {
         icon: <FaDumbbell />,
         title: 'Body Recomposition',
-        desc: 'Achieve sustainable fat loss while building lean muscle. We combine strategic nutrition with movement guidance for a body composition transformation that lasts — not a crash diet.',
+        desc: 'Build muscle and reduce fat simultaneously through strategic nutrition and movement. Maintaining healthy skeletal muscle is key to long-term metabolism, blood sugar regulation, joint stability, and independence as you age.',
     },
     {
         icon: <FaFingerprint />,
@@ -61,8 +61,8 @@ const focusAreas = [
     },
     {
         icon: <FaHeartbeat />,
-        title: 'Reset Your Health to Your Younger Self',
-        desc: 'The overarching promise: feel vibrant, energized, and strong like you did years ago. By addressing all aspects of your health holistically, you\'ll experience a total reset that turns back the clock.',
+        title: 'Longevity & Vitality',
+        desc: 'When eating, movement, breathing, and sleep are aligned, the body functions at its best. Over time, these daily habits build a longer, healthier, more vibrant life — not just living longer, but living stronger, with energy, clarity, and purpose.',
     },
 ]
 
