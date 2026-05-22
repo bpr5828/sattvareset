@@ -1,107 +1,103 @@
 import { Link } from 'react-router-dom'
 import {
-    FaHeartbeat, FaDumbbell, FaWind, FaMoon,
-    FaArrowRight, FaStar, FaQuoteLeft
+    FaHeartbeat, FaRunning, FaMountain, FaHandsHelping,
+    FaDumbbell, FaDoorOpen, FaChild, FaArrowRight, FaCheckCircle
 } from 'react-icons/fa'
-import { GiStomach } from 'react-icons/gi'
 import './Home.css'
 
-const valueProps = [
+const freedomCards = [
     {
+        letter: 'F',
+        title: 'Fitness',
         icon: <FaHeartbeat />,
-        title: 'Eat to Nourish',
-        desc: 'What you eat, how much, when, and how often all shape your health. I guide you in finding the right approach for your unique body — building sustainable habits for a healthier, stronger life.',
+        desc: 'Build total-body health through intentional movement, strength, conditioning, and wellness practices.',
     },
     {
+        letter: 'R',
+        title: 'Running',
+        icon: <FaRunning />,
+        desc: 'Running is the foundation of our community — improving endurance, confidence, discipline, and mental toughness.',
+    },
+    {
+        letter: 'E',
+        title: 'Endurance',
+        icon: <FaMountain />,
+        desc: 'Develop the resilience to push through challenges in training and in life.',
+    },
+    {
+        letter: 'E',
+        title: 'Empathy',
+        icon: <FaHandsHelping />,
+        desc: 'We support one another, encourage growth, and create a community where everybody belongs.',
+    },
+    {
+        letter: 'D',
+        title: 'Discipline',
         icon: <FaDumbbell />,
-        title: 'Move to Strengthen',
-        desc: 'The body was designed to move. Building and maintaining muscle mass boosts metabolism, regulates blood sugar, and supports long-term mobility, independence, and vitality as you age.',
+        desc: 'Consistency creates transformation. Small daily actions lead to long-term success.',
     },
     {
-        icon: <FaWind />,
-        title: 'Breathe to Balance',
-        desc: 'Conscious breathing calms the nervous system, controls cortisol, and supports body recomposition. Mindful breathwork is one of the most effective tools for lasting physical and mental wellbeing.',
+        letter: 'O',
+        title: 'Opportunity',
+        icon: <FaDoorOpen />,
+        desc: 'Every workout, every mile, and every challenge is an opportunity to grow stronger physically and mentally.',
     },
     {
-        icon: <FaMoon />,
-        title: 'Sleep to Restore',
-        desc: 'Sleep is when the body repairs tissues, balances hormones, and prepares for the next day. Quality rest is not a luxury — it is a foundation for long-term health, performance, and longevity.',
+        letter: 'M',
+        title: 'Mobility',
+        icon: <FaChild />,
+        desc: 'Movement is freedom. We prioritize flexibility, recovery, injury prevention, posture, and longevity.',
     },
 ]
 
-const testimonials = [
-    {
-        name: 'Sarah M.',
-        result: 'Lost 25 lbs in 4 months',
-        text: 'Working with Sattva Reset completely transformed my relationship with food. I have more energy than I\'ve had in years and my lab results have improved dramatically.',
-        rating: 5,
-    },
-    {
-        name: 'James R.',
-        result: 'Reversed pre-diabetes',
-        text: 'The personalized approach made all the difference. I learned to eat for my unique body and the results speak for themselves. My doctor was amazed.',
-        rating: 5,
-    },
-    {
-        name: 'Priya K.',
-        result: 'Energy through the roof',
-        text: 'I was skeptical about fasting, but the gradual approach and constant support made the transition seamless. I feel like I\'m 10 years younger!',
-        rating: 5,
-    },
-]
-
-const services = [
-    'Improve Metabolic Fitness',
-    'Time-Restricted Eating & Fasting',
-    'Optimize Eating Patterns',
-    'Food as Medicine + Gut Health',
-    'Sleep Optimization',
-    'Body Recomposition',
+const thisIsForYou = [
+    'You want to become healthier and stronger',
+    'You’re looking for motivation and accountability',
+    'You want to improve your running endurance',
+    'You want guidance on nutrition and recovery',
+    'You’re ready to build discipline and confidence',
+    'You want a supportive community that grows together',
+    'You believe fitness should transform your entire lifestyle',
 ]
 
 export default function Home() {
     return (
         <div className="home">
             {/* ===== HERO ===== */}
-            <section className="hero">
-                <div className="hero__bg">
-                    <img src="/images/hero-food.png" alt="" aria-hidden="true" />
-                    <div className="hero__overlay" />
-                </div>
-                <div className="container hero__content">
-                    <div className="hero__text animate-fade-in-up">
-                        <span className="hero__badge">Holistic Health Coaching</span>
-                        <h1>Reset Your Health,<br />Reclaim Your <span className="text-gradient">Energy</span></h1>
-                        <p className="hero__subtitle">
-                            Feel like your younger, vibrant self through personalized metabolic fitness,
-                            gut health optimization, and natural hormonal balance coaching.
-                        </p>
-                        <div className="hero__actions">
-                            <Link to="/contact" className="btn btn-primary btn-lg">
-                                Book Free Discovery Call <FaArrowRight />
-                            </Link>
-                            <Link to="/services" className="btn btn-secondary btn-lg">
-                                Explore Services
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="hero__scroll-indicator">
-                    <div className="hero__scroll-dot" />
+            <section className="page-hero">
+                <div className="container animate-fade-in-up">
+                    <span className="overline">Freedom Running Club</span>
+                    <h1>Transform Your Body. Strengthen Your Mind. <span className="text-gradient">Discover Your Freedom.</span></h1>
                 </div>
             </section>
 
-            {/* ===== VALUE PROPOSITIONS ===== */}
-            <section className="section values">
+            <section style={{ padding: '1.5rem 0 0.5rem' }}>
+                <div className="container">
+                    <div className="quote-cards__grid">
+                        <div className="quote-card">
+                            <p>&ldquo;Freedom Running Club is more than a running group. It's a complete transformation platform designed to help people move better, live healthier, think stronger, and grow together.&rdquo;</p>
+                        </div>
+                        <div className="quote-card">
+                            <p>&ldquo;Through running, mobility, nutrition, breathwork, yoga, and functional strength training, we help individuals unlock the strongest version of themselves.&rdquo;</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== WHAT FREEDOM MEANS ===== */}
+            <section className="section freedom-cards-section">
                 <div className="container">
                     <div className="section-header">
-                        <h2>The Four Foundations of Health</h2>
-                        <p>When eating, movement, breathing, and sleep are aligned — the body functions at its best, building longevity and vitality</p>
+                        <h2>What <span className="text-gradient">FREEDOM</span> Means</h2>
+                        <p>The core pillars of our community</p>
                     </div>
-                    <div className="values__grid">
-                        {valueProps.map((item, i) => (
-                            <div key={i} className={`card values__card animate-fade-in-up delay-${i + 1}`}>
-                                <div className="values__icon">{item.icon}</div>
+                    <div className="freedom-cards__grid">
+                        {freedomCards.map((item, i) => (
+                            <div key={i} className={`card freedom-card animate-fade-in-up delay-${i + 1}`}>
+                                <div className="freedom-card__header">
+                                    <span className="freedom-card__letter">{item.letter}</span>
+                                    <div className="freedom-card__icon">{item.icon}</div>
+                                </div>
                                 <h3>{item.title}</h3>
                                 <p>{item.desc}</p>
                             </div>
@@ -110,102 +106,63 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* ===== ABOUT SNIPPET ===== */}
-            <section className="section section-alt about-snippet">
-                <div className="container about-snippet__grid">
-                    <div className="about-snippet__image animate-slide-left">
-                        <img src="/images/coach-portrait.png" alt="Health Coach" />
-                        <div className="about-snippet__accent" />
-                    </div>
-                    <div className="about-snippet__text animate-slide-right">
-                        <span className="overline">Why I Do This</span>
-                        <h2>Passionate About Helping You <span className="text-gradient">Thrive</span></h2>
+            {/* ===== MISSION ===== */}
+            <section className="section section-warm">
+                <div className="container">
+                    <div className="mission-card">
+                        <h2>Our Mission</h2>
                         <p>
-                            I believe every person deserves to feel energized, vibrant, and confident in their body.
-                            After witnessing my own health transformation through the power of food as medicine,
-                            time-restricted eating, and holistic approaches, I knew I had to share this knowledge.
+                            To empower people through movement, education, and community by creating a space where fitness becomes a pathway to freedom, confidence, health, and purpose.
                         </p>
-                        <p>
-                            My approach is rooted in bio-individuality — because what works for one person may not
-                            work for another. Together, we'll discover your unique metabolic blueprint and create a
-                            sustainable path to your healthiest self.
-                        </p>
-                        <Link to="/about" className="btn btn-secondary">
-                            Read My Full Story <FaArrowRight />
-                        </Link>
                     </div>
                 </div>
             </section>
 
-            {/* ===== TESTIMONIALS ===== */}
-            <section className="section testimonials">
+            {/* ===== THIS IS FOR YOU IF ===== */}
+            <section className="section this-is-for-you">
                 <div className="container">
                     <div className="section-header">
-                        <h2>Real Transformations</h2>
-                        <p>Hear from people who have reset their health and reclaimed their lives</p>
+                        <h2>This Is For You If...</h2>
                     </div>
-                    <div className="testimonials__grid">
-                        {testimonials.map((t, i) => (
-                            <div key={i} className={`card testimonials__card animate-fade-in-up delay-${i + 1}`}>
-                                <FaQuoteLeft className="testimonials__quote-icon" />
-                                <p className="testimonials__text">{t.text}</p>
-                                <div className="testimonials__stars">
-                                    {[...Array(t.rating)].map((_, j) => (
-                                        <FaStar key={j} />
-                                    ))}
-                                </div>
-                                <div className="testimonials__author">
-                                    <strong>{t.name}</strong>
-                                    <span className="testimonials__result">{t.result}</span>
-                                </div>
+                    <div className="for-you__grid">
+                        {thisIsForYou.map((item, i) => (
+                            <div key={i} className="for-you__item card">
+                                <FaCheckCircle className="check-icon" />
+                                <p>{item}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* ===== SERVICES OVERVIEW ===== */}
-            <section className="section section-warm services-overview">
+            {/* ===== JOIN THE MOVEMENT CTA ===== */}
+            <section className="cta-section">
                 <div className="container">
-                    <div className="section-header">
-                        <h2>How I Can Help You</h2>
-                        <p>Personalized coaching programs tailored to your unique needs</p>
-                    </div>
-                    <div className="services-overview__grid">
-                        {services.map((s, i) => (
-                            <Link to="/services" key={i} className="services-overview__item animate-fade-in-up delay-${i % 4 + 1}">
-                                <GiStomach className="services-overview__icon" />
-                                <span>{s}</span>
-                                <FaArrowRight className="services-overview__arrow" />
+                    <div className="cta-section__inner">
+                        <h2>Join The Movement</h2>
+                        <p className="cta-section__tagline">
+                            Freedom is earned one step, one breath, and one decision at a time.
+                        </p>
+                        <p>
+                            At Freedom Running Club, we don't just train runners.<br />
+                            <strong>We build stronger humans.</strong>
+                        </p>
+                        <p className="cta-section__acronym">
+                            FITNESS · RUNNING · ENDURANCE · EMPATHY · DISCIPLINE · OPPORTUNITY · MOBILITY
+                        </p>
+                        <h3>Run Free. Move Better. Live Stronger.</h3>
+                        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                            <Link to="/services" className="btn btn-accent">
+                                Explore Programs <FaArrowRight />
                             </Link>
-                        ))}
-                    </div>
-                    <div className="services-overview__cta">
-                        <Link to="/services" className="btn btn-primary">
-                            View All Services <FaArrowRight />
-                        </Link>
+                            <Link to="/contact" className="btn btn-secondary" style={{ borderColor: 'white', color: 'white' }}>
+                                Start My Journey <FaArrowRight />
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* ===== FINAL CTA ===== */}
-            <section className="section cta-section">
-                <div className="container cta-section__inner">
-                    <h2>Ready to Transform Your Health?</h2>
-                    <p>
-                        Take the first step toward a healthier, more energized you.
-                        Book a free discovery call and let's create your personalized reset plan.
-                    </p>
-                    <div className="cta-section__actions">
-                        <Link to="/contact" className="btn btn-accent btn-lg">
-                            Book Free Discovery Call <FaArrowRight />
-                        </Link>
-                        <a href="https://wa.me/17034240537" className="btn btn-secondary btn-lg" target="_blank" rel="noopener noreferrer">
-                            Chat on WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </section>
         </div>
     )
 }

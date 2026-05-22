@@ -19,9 +19,7 @@ export default function Footer() {
                             <img src="/SattvaResetLogo3.jpeg" alt="Sattva Reset" className="footer__logo" />
                             <h3>Sattva Reset</h3>
                             <p>
-                                Holistic health coaching focused on metabolic fitness, gut health,
-                                and natural hormonal balance. Your journey to a vibrant, energized
-                                life starts here.
+                                A complete transformation platform designed to help you move better, live healthier, think stronger, and grow together. Your journey to freedom starts here.
                             </p>
                             <div className="footer__social">
                                 <a href="https://wa.me/17034240537" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
@@ -44,24 +42,22 @@ export default function Footer() {
                             <h4>Quick Links</h4>
                             <ul>
                                 <li><Link to="/">Home</Link></li>
-                                <li><Link to="/about">About</Link></li>
-                                <li><Link to="/services">Services</Link></li>
-                                <li><Link to="/success-stories">Success Stories</Link></li>
+                                <li><Link to="/services">What We Offer</Link></li>
                                 <li><Link to="/blog">Blog</Link></li>
                                 <li><Link to="/contact">Contact</Link></li>
                             </ul>
                         </div>
 
-                        {/* Services */}
+                        {/* What We Offer */}
                         <div className="footer__col">
-                            <h4>Services</h4>
+                            <h4>What We Offer</h4>
                             <ul>
-                                <li><Link to="/services">Metabolic Fitness</Link></li>
-                                <li><Link to="/services">Time-Restricted Eating</Link></li>
-                                <li><Link to="/services">Gut Health & Detox</Link></li>
-                                <li><Link to="/services">Hormonal Balance</Link></li>
-                                <li><Link to="/services">Sleep Optimization</Link></li>
-                                <li><Link to="/services">Body Recomposition</Link></li>
+                                <li><Link to="/services">Running Programs</Link></li>
+                                <li><Link to="/services">Nutrition Coaching</Link></li>
+                                <li><Link to="/services">Yoga & Mobility</Link></li>
+                                <li><Link to="/services">Breathwork Training</Link></li>
+                                <li><Link to="/services">Strength Training</Link></li>
+                                <li><Link to="/services">Community</Link></li>
                             </ul>
                         </div>
 

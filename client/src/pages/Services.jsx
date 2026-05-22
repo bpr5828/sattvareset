@@ -1,182 +1,99 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
-    FaHeartbeat, FaClock, FaUtensils, FaLeaf, FaSeedling,
-    FaBed, FaDumbbell, FaFingerprint, FaArrowRight,
+    FaRunning, FaUtensils, FaLeaf, FaWind,
+    FaDumbbell, FaUsers, FaArrowRight,
     FaChevronDown, FaChevronUp, FaCheckCircle
 } from 'react-icons/fa'
-import { GiStomach, GiMedicines } from 'react-icons/gi'
 import './Services.css'
 
-const focusAreas = [
+const offerings = [
     {
-        icon: <FaHeartbeat />,
-        title: 'Improve Metabolic Fitness',
-        desc: 'Optimize how your body generates and uses energy. We\'ll work on improving insulin sensitivity, blood sugar regulation, and overall metabolic efficiency so your body burns fuel more effectively throughout the day.',
-    },
-    {
-        icon: <FaClock />,
-        title: 'Time-Restricted Eating & Fasting',
-        desc: 'Learn to harness the power of strategic eating windows. Time-restricted eating triggers autophagy — your body\'s cellular renewal process — leading to improved metabolism, mental clarity, and cellular repair.',
+        icon: <FaRunning />,
+        title: 'Running Programs',
+        desc: 'Structured group runs and endurance training for all experience levels.',
     },
     {
         icon: <FaUtensils />,
-        title: 'Optimize Eating Patterns & Balance Your Plate',
-        desc: 'Discover the ideal macronutrient ratios and meal timing for your unique body. We\'ll create a balanced plate approach that satisfies, nourishes, and supports your specific health goals.',
-    },
-    {
-        icon: <FaSeedling />,
-        title: 'Qualitize Your Food Choices',
-        desc: 'Focus on food quality over strict calorie counting. Learn to choose nutrient-dense whole foods that fuel your body optimally — no deprivation, no fads, just real food that heals.',
-    },
-    {
-        icon: <GiMedicines />,
-        title: 'Food as Medicine + Gut Health',
-        desc: 'Your gut is your second brain. We\'ll use targeted nutrition to heal your gut lining, balance your microbiome, and leverage food\'s therapeutic properties for systemic health improvements.',
+        title: 'Nutrition Coaching',
+        desc: 'Learn sustainable eating habits that fuel performance, recovery, energy, and long-term health.',
     },
     {
         icon: <FaLeaf />,
-        title: 'Detoxification Support',
-        desc: 'Support your body\'s natural detox pathways through strategic nutrition, hydration, and lifestyle modifications. A well-functioning detox system is essential for hormonal balance and energy.',
+        title: 'Yoga & Mobility Training',
+        desc: 'Improve flexibility, balance, posture, recovery, and overall movement quality.',
     },
     {
-        icon: <FaBed />,
-        title: 'Sleep Optimization',
-        desc: 'Sleep is when the body repairs tissues, balances hormones, and restores energy. Without proper rest, even the best nutrition and exercise cannot fully support your health. Quality sleep improves focus, mood, performance, weight loss, and recovery.',
-    },
-    {
-        icon: <GiStomach />,
-        title: 'Hormonal Balance Through Natural Eating',
-        desc: 'Balance estrogen, progesterone, testosterone, thyroid hormones, and cortisol through precision nutrition. No synthetic interventions — just the power of the right foods at the right times.',
+        icon: <FaWind />,
+        title: 'Breathwork Training',
+        desc: 'Develop better breathing patterns to improve endurance, focus, recovery, and stress management.',
     },
     {
         icon: <FaDumbbell />,
-        title: 'Body Recomposition',
-        desc: 'Build muscle and reduce fat simultaneously through strategic nutrition and movement. Maintaining healthy skeletal muscle is key to long-term metabolism, blood sugar regulation, joint stability, and independence as you age.',
+        title: 'Bodyweight Strength Training',
+        desc: 'Build functional strength, stability, coordination, and athletic performance using your own body.',
     },
     {
-        icon: <FaFingerprint />,
-        title: 'Bio-Individuality',
-        desc: 'Your plan is uniquely yours. Through careful assessment and ongoing refinement, we\'ll discover exactly what your body needs to thrive — because cookie-cutter approaches don\'t create lasting results.',
-    },
-    {
-        icon: <FaHeartbeat />,
-        title: 'Longevity & Vitality',
-        desc: 'When eating, movement, breathing, and sleep are aligned, the body functions at its best. Over time, these daily habits build a longer, healthier, more vibrant life — not just living longer, but living stronger, with energy, clarity, and purpose.',
-    },
-]
-
-const steps = [
-    {
-        num: '01',
-        title: 'Discovery Call',
-        desc: 'A free 30-minute call to understand your health goals, challenges, and what you\'re looking for in a coaching relationship.',
-    },
-    {
-        num: '02',
-        title: 'Health Assessment',
-        desc: 'A comprehensive review of your current health status, eating patterns, lifestyle, lab work, and personal history.',
-    },
-    {
-        num: '03',
-        title: 'Personalized Plan',
-        desc: 'Your custom roadmap — including nutrition protocols, fasting schedules, supplement guidance, and lifestyle modifications.',
-    },
-    {
-        num: '04',
-        title: 'Ongoing Support',
-        desc: 'Regular coaching sessions, progress tracking, plan adjustments, and unlimited messaging support between sessions.',
+        icon: <FaUsers />,
+        title: 'Accountability & Community',
+        desc: 'Surround yourself with people committed to growth, discipline, and positive change.',
     },
 ]
 
 const packages = [
     {
-        name: '3-Month Reset',
-        tagline: 'Foundation Program',
+        name: 'Foundation Membership',
+        tagline: 'Start Your Journey',
         features: [
-            'Initial health assessment',
-            'Personalized nutrition plan',
-            'Bi-weekly coaching sessions',
-            'Fasting protocol guidance',
-            'Email support',
-            'Recipe collection',
+            'Access to all group runs',
+            'Weekly accountability check-ins',
+            'Basic nutrition guidelines',
+            'Community forum access',
         ],
         highlighted: false,
     },
     {
-        name: '6-Month Transformation',
+        name: 'Transformation Program',
         tagline: 'Most Popular',
         features: [
-            'Everything in 3-Month Reset',
-            'Weekly coaching sessions',
-            'Gut health protocol',
-            'Hormonal balance program',
-            'WhatsApp support',
-            'Supplement guidance',
-            'Lab work review',
-            'Meal planning tools',
+            'Everything in Foundation',
+            'Personalized nutrition plan',
+            'Mobility & yoga sessions',
+            'Breathwork workshops',
+            'Direct coach access',
         ],
         highlighted: true,
-    },
-    {
-        name: 'Ongoing Partnership',
-        tagline: 'For Sustained Results',
-        features: [
-            'Everything in 6-Month',
-            'Flexible session scheduling',
-            'Priority support',
-            'Quarterly health reviews',
-            'Advanced protocols',
-            'Lifestyle optimization',
-        ],
-        highlighted: false,
     },
 ]
 
 export default function Services() {
-    const [openIndex, setOpenIndex] = useState(null)
-
-    const toggleAccordion = (i) => {
-        setOpenIndex(openIndex === i ? null : i)
-    }
+    // Accordion state removed as it's now a grid of cards
 
     return (
         <div className="services-page">
             {/* Hero */}
             <section className="page-hero">
                 <div className="container">
-                    <span className="overline">Services</span>
-                    <h1>Personalized Health Coaching to <span className="text-gradient">Reset Your Body & Life</span></h1>
+                    <span className="overline">What We Offer</span>
+                    <h1>Train For Life. <span className="text-gradient">Not Just Race Day.</span></h1>
                     <p>
-                        Evidence-inspired, holistic programs tailored to your unique biology,
-                        goals, and lifestyle.
+                        Comprehensive training programs combining endurance, strength, mobility, and nutrition to build a stronger you.
                     </p>
                 </div>
             </section>
 
-            {/* Focus Areas */}
-            <section className="section services-focus">
+            {/* Offerings */}
+            <section className="services-focus" style={{ paddingTop: '2rem' }}>
                 <div className="container">
-                    <div className="section-header">
-                        <h2>Core Focus Areas</h2>
-                        <p>Click on any area to learn more about how it can transform your health</p>
+                    <div className="section-header" style={{ marginBottom: '1rem' }}>
+                        <h2>Our Core Pillars</h2>
                     </div>
-                    <div className="services-focus__list">
-                        {focusAreas.map((area, i) => (
-                            <div
-                                key={i}
-                                className={`services-focus__item ${openIndex === i ? 'services-focus__item--open' : ''}`}
-                            >
-                                <button
-                                    className="services-focus__header"
-                                    onClick={() => toggleAccordion(i)}
-                                    aria-expanded={openIndex === i}
-                                >
-                                    <div className="services-focus__icon">{area.icon}</div>
+                    <div className="services-focus__grid">
+                        {offerings.map((area, i) => (
+                            <div key={i} className="services-focus__card">
+                                <div className="services-focus__icon">{area.icon}</div>
+                                <div>
                                     <h3>{area.title}</h3>
-                                    {openIndex === i ? <FaChevronUp /> : <FaChevronDown />}
-                                </button>
-                                <div className="services-focus__body">
                                     <p>{area.desc}</p>
                                 </div>
                             </div>
@@ -185,31 +102,11 @@ export default function Services() {
                 </div>
             </section>
 
-            {/* How It Works */}
-            <section className="section section-alt services-process">
-                <div className="container">
-                    <div className="section-header">
-                        <h2>How It Works</h2>
-                        <p>A simple, supportive process to guide your transformation</p>
-                    </div>
-                    <div className="services-process__grid">
-                        {steps.map((step, i) => (
-                            <div key={i} className={`services-process__step animate-fade-in-up delay-${i + 1}`}>
-                                <span className="services-process__num">{step.num}</span>
-                                <h3>{step.title}</h3>
-                                <p>{step.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
             {/* Packages */}
-            <section className="section services-packages">
+            <section className="services-packages" style={{ paddingBottom: '2rem' }}>
                 <div className="container">
-                    <div className="section-header">
-                        <h2>Programs & Packages</h2>
-                        <p>Choose the program that fits your goals and timeline</p>
+                    <div className="section-header" style={{ marginBottom: '1rem', marginTop: '2rem' }}>
+                        <h2>Memberships & Programs</h2>
                     </div>
                     <div className="services-packages__grid">
                         {packages.map((pkg, i) => (
@@ -229,7 +126,7 @@ export default function Services() {
                                     ))}
                                 </ul>
                                 <Link to="/contact" className={`btn ${pkg.highlighted ? 'btn-primary' : 'btn-secondary'}`}>
-                                    Get Started <FaArrowRight />
+                                    Join Now <FaArrowRight />
                                 </Link>
                             </div>
                         ))}
@@ -237,16 +134,7 @@ export default function Services() {
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="section cta-section">
-                <div className="container cta-section__inner">
-                    <h2>Not Sure Which Program Is Right for You?</h2>
-                    <p>Book a free discovery call and we'll find the perfect fit together.</p>
-                    <Link to="/contact" className="btn btn-accent btn-lg">
-                        Book Free Discovery Call <FaArrowRight />
-                    </Link>
-                </div>
-            </section>
+
         </div>
     )
 }

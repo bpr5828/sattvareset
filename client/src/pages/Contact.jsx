@@ -16,8 +16,8 @@ const faqs = [
         a: 'No. My approach focuses on whole, accessible foods you can find at any grocery store. If I recommend specific supplements, they\'re based on your individual needs and always optional — food comes first.',
     },
     {
-        q: 'Is this a diet program?',
-        a: 'No. Sattva Reset is a holistic health coaching program, not a diet. We focus on sustainable lifestyle changes that address the root causes of health issues — metabolism, gut health, hormones, sleep, and stress — rather than restrictive eating plans.',
+        q: 'Is this a running-only program?',
+        a: 'No. Freedom Running Club is a complete transformation platform. While running is our foundation, we integrate mobility, strength training, breathwork, and nutrition to build stronger, healthier humans.',
     },
     {
         q: 'Can you work with my doctor or healthcare team?',
@@ -25,7 +25,7 @@ const faqs = [
     },
     {
         q: 'What does a coaching session look like?',
-        a: 'Sessions are 45-60 minutes via video call. We review your progress, address challenges, adjust your plan, and set goals for the coming weeks. Between sessions, you have support via email or WhatsApp depending on your package.',
+        a: 'Sessions vary by membership, but typically involve group runs, focused mobility or strength workshops, and coach check-ins. Between sessions, you have support via our community forum or direct coach access depending on your package.',
     },
 ]
 
@@ -69,7 +69,7 @@ export default function Contact() {
             <section className="page-hero">
                 <div className="container">
                     <span className="overline">Get in Touch</span>
-                    <h1>Ready to <span className="text-gradient">Reset Your Health?</span></h1>
+                    <h1>Ready to <span className="text-gradient">Transform Your Life?</span></h1>
                     <p>
                         Book a free discovery call or send me a message.
                         I'd love to learn about your goals and see how I can help.

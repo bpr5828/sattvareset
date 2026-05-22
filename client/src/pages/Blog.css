@@ -1,13 +1,11 @@
-/* =====================
-   Blog Page Styles
-   ===================== */
+
 
 /* Categories */
 .blog__categories {
     display: flex;
     gap: var(--space-sm);
     flex-wrap: wrap;
-    margin-bottom: var(--space-2xl);
+    margin-bottom: var(--space-xl);
     justify-content: center;
 }
 
@@ -35,7 +33,7 @@
 .blog__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-xl);
+    gap: var(--space-lg);
 }
 
 .blog__card {
@@ -77,7 +75,7 @@
 }
 
 .blog__card-content {
-    padding: var(--space-xl);
+    padding: var(--space-lg);
 }
 
 .blog__card-content h3 {
@@ -126,61 +124,6 @@
     gap: 8px;
 }
 
-/* Free Resources */
-.blog-resources__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-xl);
-}
-
-.blog-resources__card {
-    text-align: center;
-    padding: var(--space-2xl);
-}
-
-.blog-resources__icon {
-    width: 60px;
-    height: 60px;
-    border-radius: var(--radius-lg);
-    background: linear-gradient(135deg, var(--orange-200), var(--orange-300));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto var(--space-md);
-    font-size: 1.3rem;
-    color: var(--orange-700);
-}
-
-.blog-resources__type {
-    display: inline-block;
-    padding: 0.2rem 0.7rem;
-    background: var(--green-100);
-    color: var(--green-800);
-    font-size: 0.7rem;
-    font-weight: 600;
-    border-radius: var(--radius-full);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: var(--space-md);
-}
-
-.blog-resources__card h3 {
-    font-size: 1.1rem;
-    font-family: var(--font-body);
-    font-weight: 600;
-    margin-bottom: var(--space-sm);
-}
-
-.blog-resources__card p {
-    font-size: 0.88rem;
-    margin-bottom: var(--space-lg);
-}
-
-.blog-resources__card .btn {
-    width: 100%;
-    justify-content: center;
-}
-
 /* Newsletter */
 .blog-newsletter__form {
     display: flex;
@@ -218,12 +161,6 @@
 @media (max-width: 768px) {
     .blog__grid {
         grid-template-columns: 1fr;
-    }
-
-    .blog-resources__grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
     }
 
     .blog-newsletter__form {
