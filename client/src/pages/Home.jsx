@@ -135,34 +135,6 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* ===== JOIN THE MOVEMENT CTA ===== */}
-            <section className="cta-section">
-                <div className="container">
-                    <div className="cta-section__inner">
-                        <h2>Join The Movement</h2>
-                        <p className="cta-section__tagline">
-                            Freedom is earned one step, one breath, and one decision at a time.
-                        </p>
-                        <p>
-                            At Freedom Running Club, we don't just train runners.<br />
-                            <strong>We build stronger humans.</strong>
-                        </p>
-                        <p className="cta-section__acronym">
-                            FITNESS · RUNNING · ENDURANCE · EMPATHY · DISCIPLINE · OPPORTUNITY · MOBILITY
-                        </p>
-                        <h3>Run Free. Move Better. Live Stronger.</h3>
-                        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                            <Link to="/services" className="btn btn-accent">
-                                Explore Programs <FaArrowRight />
-                            </Link>
-                            <Link to="/contact" className="btn btn-secondary" style={{ borderColor: 'white', color: 'white' }}>
-                                Start My Journey <FaArrowRight />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
         </div>
     )
 }
